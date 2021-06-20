@@ -1,0 +1,86 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- 
+Hello Camper!
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+- The freeCodeCamp Team 
+-->
+<head>
+  <title>My First Survey Form!</title>
+</head>
+
+<body>
+  <header>
+    <section class="title-text">
+      <h1 id="title">Survey Form</h1>
+      <p id="description" class="title-text"><em style="font-size: 90%;">How was your experience as a customer?</em></p>
+    </section>
+  </header>
+  
+  <main>
+    <form id="survey-form">
+      <section id="survey-fields">
+        <!-- The person infomation-->
+        <label for="name" id="name-label">* Name:</label>
+        <input id="name" type="text" placeholder="enter your name" required>
+        <label for="Email" id="email-label">* Email:</label>
+        <input id="email" type="email" placeholder="enter your email" required>
+        <label for="number" id="number-label">* Age:</label>
+        <input id="number" type="number" placeholder="enter your age" min=1 max=125 required>
+        <!-- How was the customer service for the store? -->
+        <label for="dropdown">How was our customer service??</label>
+        <select id="dropdown" form="survey-form">
+          <option value="" disabled selected>Select an option</option>
+          <option value="Excellent">Excellent!</option>
+          <option value="Good">Good!</option>
+          <option value="Could be better">Couldve been better</option>
+          <option value="Horrible">Horrible</option>
+          <option value="Hiring">Hiring</option>
+        </select>
+        <!-- How likely is that you would recommend our store to a family/friend -->
+        <label for="recommendation">* How likely is that you would recommend our store to a family/friend?</label>
+        <fieldset id="recommendation">
+          <label for="r_definitely"><input type="radio" name="recommend" id="r_definitely" value="definitely" required>Definitely</label>
+          <label for="r_maybe"><input type="radio" name="recommend" id="r_maybe" value="maybe" required>Maybe</label>
+          <label for="r_not_sure"><input type="radio" name="recommend" id="r_not_sure" value="notsure" required>Not sure</label>
+        </fieldset>
+        
+        <!-- What do you like most in FCC -->
+        <label for="likethemost">What do you like most in our store?</label>
+        <select id="likethemost">
+          <option value="" disabled selected>select an option</option>
+          <option value="clothes">Clothes!</option>
+          <option value="produce">Produce!</option>
+          <option value="customer service">Customer Service!</option>
+          <option value="deals">Deals!</option>
+        </select>
+      
+        <!-- Things that should be improved in the future -->
+        <label for="improvements">Things that should be improved in the future:</label>
+        <fieldset id="improvements">
+          <legend>(<em>Check all that apply</em>)</legend>
+          <label for="c-CS"><input type="checkbox" name="improve-checks" id="c-CS" value="CS">Customer Service</label>
+          <label for="c-Web"><input type="checkbox" name="improve-checks" id="c-Web" value="Web">Website</label>
+          <label for="c-deals"><input type="checkbox" name="improve-checks" id="c-deals" value="deals">Deals</label>
+          <label for="c-Products"><input type="checkbox" name="improve-checks" id="c-Products" value="Products">Products</label>
+          <label for="c-Prices"><input type="checkbox" name="improve-checks" id="c-Prices" value="Prices">Prices</label>
+          <label for="c-Locations"><input type="checkbox" name="improve-checks" id="c-Locations" value="Locations">Locations</label>
+          <label for="c-Selection"><input type="checkbox" name="improve-checks" id="c-Selection" value="Selection">More Selections</label>
+          <label for="c-Navigation"><input type="checkbox" name="improve-checks" id="c-Navigation" value="Navigation">Navigation</label>
+          <label for="c-Hiring"><input type="checkbox" name="improve-checks" id="c-Hiring" value="Hiring">Hiring</label>
+          <label for="c-Additional assistance"><input type="checkbox" name="improve-checks" id="c-Additional assistance" value="Additional assistance">
+Additional assistance</label>
+          <label for="c-Other"><input type="checkbox" name="improve-checks" id="c-Other" value="Other">Other</label>
+        </fieldset>
+       
+        <!-- Any Comments or Suggestions -->
+        <label for="comments">Anything else?</label>
+        <textarea style="height:50px;resize:vertical;" id="comments" placeholder="enter a comment"></textarea>
+      </section>
+
+      <!-- submit -->
+      <button id="submit">Submit</button>
+    </form>
+  </main>
+ 
+</body>
